@@ -24,3 +24,22 @@ We have extracted RNA samples from all the cultures at two different time period
 | B_72_plus |	Big	| Elicited with MeJA |	72 hour |
 | B_18_min |	Big	| Mock elicited |	18 hour |
 | B_72_min |	Big |	Mock elicited |	72 hour |
+
+# RNA-seq pipeline
+After the RNA extraction, we have used Illumina Hi-Seq platform for read sequence. We have used several command line tool to process and align paired-end reads. Here is the list of tools we have used in this project to process the raw reads:
+
+| Tools | Functions |
+|-------|-----------|
+| FastQC | Quality assessments of raw reads |
+| TrimGalore | Remove low quality reads |
+| Hisat2 | Read alignments to genome |
+| Featurecounts | Calculation of transcripts abundance |
+| DESeq2 | Calculation of differential gene expression |
+
+
+
+
+
+
+
+
