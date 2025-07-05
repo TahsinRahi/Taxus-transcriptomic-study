@@ -36,10 +36,14 @@ After the RNA extraction, we have used Illumina Hi-Seq platform for read sequenc
 | Featurecounts | Calculation of transcripts abundance |
 | DESeq2 | Calculation of differential gene expression |
 
-
-
-
-
+1. Raw reads quality assessment with **fastqc**
+``` bash
+fastqc /path/to/fastq-file.fastq.gz
+```
+2. Trimming adapter sequences with **trim_galore**
+```bash
+trim_galore --fastqc /path/to/fastq-file.fastq.gz
+```
 
 
 
