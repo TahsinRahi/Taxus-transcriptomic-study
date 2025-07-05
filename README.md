@@ -7,10 +7,10 @@ Here, we have conducted an extensive Taxus transcriptomic (RNA-seq) study on var
 
 # Experimental design
 From regular Taxus PCC, we have generated two phentoypes of different average aggregate size:
-1. Small aggregates - Average diameter 500 $\mu$
-2. Big aggregates - Average diameter 1000 $\mu$
+1. Small aggregates - Average diameter 500 $\mu m$
+2. Big aggregates - Average diameter 1000 $\mu m$
 
-We have then elicit the culture with methyl jasmonate (MeJA) to a final concentration of 150 uM
+We have then elicit the culture with methyl jasmonate (MeJA) to a final concentration of 150 $\mu M$
 We have extracted RNA samples from all the cultures at two different time period.
 
 **Table abbreviation:** **S** = Small aggregates, **B** = Big aggregates, **plus** = Elicited with MeJA, **min** = Mock elicited
