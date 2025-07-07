@@ -37,13 +37,35 @@ After the RNA extraction, we have used Illumina Hi-Seq platform for read sequenc
 | DESeq2 | Calculation of differential gene expression |
 
 1. Raw reads quality assessment with **fastqc**
-``` bash
+```
+bash
+
 fastqc /path/to/fastq-file.fastq.gz
 ```
 2. Trimming adapter sequences with **trim_galore**
-```bash
+```
+bash
+
 trim_galore --fastqc /path/to/fastq-file.fastq.gz
 ```
+3. Read alignment with **Hisat2**
+At first, building genome index:
+```
+bash
 
+hisat2-build taxus-genome.fa taxus-genome-index-prefix
+```
+Then, align paired end reads to the indexed genome and save the alignment into a sam file. For example, for sample: S_18_plus
 
+```
+bash
 
+hista2 -x taxus-genome-index-prefix -1 S_18_plus_R1.fastq -2 S_18_plus_R2.fastq -S S_18_plus.sam
+```
+Now, converting this sam file to bam file and sort it for downstream analysis using samtools
+```
+bash
+
+samtools view -bS S_18_plus.sam | samtools sort -o S_18_plus_sorted.bam
+```
+The whole process was conducted on all of the eight (8) samples mentioned earlier
