@@ -77,3 +77,5 @@ bash
 featureCounts -a taxus-genes.gtf -o counts.txt S_18_plus_sorted.bam S_18_plus_sorted.bam S_18_min_sorted.bam
 ```
 Here, featureCounts is applied on two samples so that differential gene expression data can be obtained in the next steps.
+
+5. Next, we have calculated differential gene expression using DeSeq2 R package. The can be found in [deseq2.R](deseq2.R)
