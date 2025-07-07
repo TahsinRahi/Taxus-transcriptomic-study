@@ -69,3 +69,11 @@ bash
 samtools view -bS S_18_plus.sam | samtools sort -o S_18_plus_sorted.bam
 ```
 The whole process was conducted on all of the eight (8) samples mentioned earlier
+
+4. Calculation of transcript abundance using featurecounts
+```
+bash
+
+featureCounts -a taxus-genes.gtf -o counts.txt S_18_plus_sorted.bam S_18_plus_sorted.bam S_18_min_sorted.bam
+```
+Here, featureCounts is applied on two samples so that differential gene expression data can be obtained in the next steps.
