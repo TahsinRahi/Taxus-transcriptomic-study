@@ -74,7 +74,7 @@ The whole process was conducted on all of the eight (8) samples mentioned earlie
 ```
 bash
 
-featureCounts -a taxus-genes.gtf -o counts.txt S_18_plus_sorted.bam S_18_plus_sorted.bam S_18_min_sorted.bam
+featureCounts -a taxus-genes.gtf -o counts.txt S_18_plus_sorted.bam S_18_min_sorted.bam
 ```
 Here, featureCounts is applied on two samples so that differential gene expression data can be obtained in the next steps.
 
