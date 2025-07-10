@@ -79,3 +79,5 @@ featureCounts -a taxus-genes.gtf -o counts.txt S_18_plus_sorted.bam S_18_min_sor
 Here, featureCounts is applied on two samples so that differential gene expression data can be obtained in the next steps.
 
 5. Next, we have calculated differential gene expression using DeSeq2 R package. The can be found in [deseq2.R](deseq2.R)
+
+6. The whole process is integrated into nextflow workflow except for the deseq2 part. DeSeq2 R script was run manually each time with two count files to obtained differential gene expression. The nextflow code can be found [here](Nextflow-RNA-seq-pipeline)
